@@ -1,0 +1,35 @@
+package SpringJDBC;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import SpringJDBC.Dao.StudentDao;
+import SpringJDBC.Entity.Student;
+
+
+
+
+
+public class DBMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("DB");
+		ApplicationContext c1=new ClassPathXmlApplicationContext("SpringJDBC/dbconfig.xml");
+		
+		StudentDao s=c1.getBean("impl",StudentDao.class);
+		
+		Student st=new Student();
+		st.setName("Pragati");
+		st.setCity("Banaras");
+		st.setAge(23);
+		
+		int result=s.insert(st);
+		System.out.println(result);
+		
+
+	}
+
+}

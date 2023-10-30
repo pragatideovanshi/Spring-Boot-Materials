@@ -1,0 +1,5 @@
+package com.MicrosoftSQLJPA.Dao;
+
+public interface EmpRepo {
+
+}

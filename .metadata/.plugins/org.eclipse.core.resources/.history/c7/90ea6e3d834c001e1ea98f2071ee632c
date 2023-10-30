@@ -1,0 +1,9 @@
+package SpringJDBCDao;
+
+import Entities.StudentDB;
+
+public interface StudentDao {
+	
+	public int insert(StudentDB st);
+
+}

@@ -1,0 +1,19 @@
+package Reference;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import Collections.Emp;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ApplicationContext c2=new ClassPathXmlApplicationContext("Reference/referenceconfig.xml");
+        A e=(A)c2.getBean("aref");
+        System.out.println(e);
+        System.out.println(e.getOb().getY());
+	}
+
+}

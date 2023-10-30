@@ -1,0 +1,29 @@
+package SpringJDBC.JDBCDao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import SpringJDBC.Entities.StudentDB;
+
+public class DaoImpl implements StudnetDao{
+	
+	private JdbcTemplate jdbctempl;
+
+	public JdbcTemplate getJdbctempl() {
+		return jdbctempl;
+	}
+
+	public void setJdbctempl(JdbcTemplate jdbctempl) {
+		this.jdbctempl = jdbctempl;
+	}
+
+	@Override
+	public int insert(StudentDB st) {
+		// TODO Auto-generated method stub
+		String q="insert into Perosn(Name,City,Age) values(?,?,?)";
+		int result=this.jdbctempl.update(q,st.getName(),st.getCity(),st.getAge());
+		return result;
+	}
+	
+	
+
+}

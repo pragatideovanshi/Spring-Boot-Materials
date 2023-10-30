@@ -1,0 +1,9 @@
+package com.StudentManagement.StudentRepo;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.StudentManagement.Entity.StudentMangement;
+
+public interface StudentRepository extends CrudRepository<StudentMangement, Integer>{
+
+}

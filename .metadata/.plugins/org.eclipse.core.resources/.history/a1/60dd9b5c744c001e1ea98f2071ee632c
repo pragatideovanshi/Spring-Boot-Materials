@@ -1,0 +1,5 @@
+package SpringJDBC;
+
+public class StudentDB {
+
+}

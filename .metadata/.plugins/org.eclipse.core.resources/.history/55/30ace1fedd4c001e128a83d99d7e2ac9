@@ -1,0 +1,21 @@
+package com.DevToolsBoot.Controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.DevToolsBoot.Entity.Book;
+
+@RestController
+public class BookController {
+	
+	@GetMapping("/books")
+	public Book getbooks() {
+		Book b=new Book();
+		b.setId(11);
+		b.setAuthor("William");
+		b.setTitle("7 Stages");
+		return b;
+	}
+
+}

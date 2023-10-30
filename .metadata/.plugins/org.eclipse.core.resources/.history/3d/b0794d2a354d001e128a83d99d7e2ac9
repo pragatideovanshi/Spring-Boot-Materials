@@ -1,0 +1,51 @@
+package com.DevToolsBoot.Services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+import com.DevToolsBoot.Entity.Book;
+
+@Component
+public class BookService {
+	
+	private static List<Book> l=new ArrayList<>();
+	
+	static {
+		l.add(new Book(12,"A","ABC"));
+		l.add(new Book(12,"B","ABC"));
+		l.add(new Book(12,"C","ABC"));
+	}
+	
+	public List<Book> getallBooks(){
+		return l;
+	}
+	
+	public Book getbyid(int id) {
+		for (Book i : l){
+			if(i.getId()==id) {
+				return i; 
+			} 
+		}
+		return null;
+	}
+	
+	public Book addbook(Book b) {
+		l.add(b);
+		return b;
+	}
+	
+	public void deletebook(int id) {
+		for (Book i : l){
+			if(i.getId()==id) {
+				l.remove(i); 
+				System.out.println("Deleted");
+				break;
+			} 
+		}
+		System.out.println( "ID not Found");
+		
+	}
+
+}

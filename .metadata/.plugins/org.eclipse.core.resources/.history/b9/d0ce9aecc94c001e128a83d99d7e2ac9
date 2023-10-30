@@ -1,0 +1,8 @@
+spring.datasource.name =test
+spring.datasource.url=jdbc:sqlserver://MSI\\SQLCHECK:1433;databaseName=StudentDb;encrypt=true;trustServerCertificate=true
+spring.datasource.username=sa
+spring.datasource.password=sqlpswd11
+spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.SQLServerDialect
+spring.jpa.generate-ddl=true
+

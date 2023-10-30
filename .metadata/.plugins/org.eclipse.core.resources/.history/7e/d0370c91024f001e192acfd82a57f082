@@ -1,0 +1,55 @@
+ package com.StudentManagement.Entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "StudentMangaement")
+public class  StudentMangement{
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int roll_number;
+	private String name;
+	private String address;
+	private float percentage;
+	
+	public int getRoll_number() {
+		return roll_number;
+	}
+	public void setRoll_number(int roll_number) {
+		this.roll_number = roll_number;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		name = name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		address = address;
+	}
+	public float getPercentage() {
+		return percentage;
+	}
+	public void setPercentage(float percentage) {
+		percentage = percentage;
+	}
+	public StudentMangement(int roll_number, String name, String address, float percentage) {
+		super();
+		this.roll_number = roll_number;
+		name = name;
+		address = address; 
+		percentage = percentage;
+	}
+	public StudentMangement() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+}

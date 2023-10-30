@@ -1,0 +1,19 @@
+package com.StudentManagement.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.StudentManagement.Entity.StudentMangement;
+import com.StudentManagement.StudentRepo.StudentRepository;
+
+public class StudentService {
+	
+	@Autowired
+	StudentRepository sr;
+	
+	public StudentMangement registerstudent(StudentMangement s) {
+		StudentMangement sm= sr.save(s);
+		return sm;
+		
+	}
+
+}

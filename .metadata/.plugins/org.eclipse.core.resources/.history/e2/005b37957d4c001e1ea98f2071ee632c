@@ -1,0 +1,49 @@
+package SpringJDBC;
+
+public class StudentDB {
+	private int Id;
+	private String LastName;
+	private String FirstName;
+	private String City;
+	public int getId() {
+		return Id;
+	}
+	public void setId(int id) {
+		Id = id;
+	}
+	public String getLastName() {
+		return LastName;
+	}
+	public void setLastName(String lastName) {
+		LastName = lastName;
+	}
+	public String getFirstName() {
+		return FirstName;
+	}
+	public void setFirstName(String firstName) {
+		FirstName = firstName;
+	}
+	public String getCity() {
+		return City;
+	}
+	public void setCity(String city) {
+		City = city;
+	}
+	public StudentDB(int id, String lastName, String firstName, String city) {
+		super();
+		Id = id;
+		LastName = lastName;
+		FirstName = firstName;
+		City = city;
+	}
+	public StudentDB() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "StudentDB [Id=" + Id + ", LastName=" + LastName + ", FirstName=" + FirstName + ", City=" + City + "]";
+	}
+	
+
+}

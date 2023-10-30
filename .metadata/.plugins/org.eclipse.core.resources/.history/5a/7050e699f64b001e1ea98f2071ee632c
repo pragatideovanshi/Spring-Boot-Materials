@@ -1,0 +1,14 @@
+package Reference;
+
+public class B {
+	private int B_ID;
+	private String B_Name;
+	
+	public void set_ID(int Id) {
+		B_ID=Id;
+	}
+	
+	public void set_Name(String Name) {
+		B_Name=Name;
+	}
+}

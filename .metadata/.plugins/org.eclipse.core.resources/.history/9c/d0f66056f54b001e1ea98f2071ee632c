@@ -1,0 +1,6 @@
+package Reference;
+
+public class B {
+	private int B_ID;
+	private String B_Name;
+}

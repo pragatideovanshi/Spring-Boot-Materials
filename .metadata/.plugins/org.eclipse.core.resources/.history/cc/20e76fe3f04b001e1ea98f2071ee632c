@@ -1,0 +1,26 @@
+package com.springcore.springcore;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import Collections.Emp;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        
+        ApplicationContext c1=new ClassPathXmlApplicationContext("Collections/config.xml");
+        Student s=(Student)c1.getBean("student2");
+        System.out.println(s);
+        
+        ApplicationContext c2=new ClassPathXmlApplicationContext("collectionconfig.xml");
+        Emp e=(Emp)c1.getBean("emp1");
+        System.out.println(s);
+    }
+}

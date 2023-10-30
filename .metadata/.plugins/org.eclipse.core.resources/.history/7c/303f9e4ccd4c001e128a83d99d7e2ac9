@@ -1,0 +1,26 @@
+package com.MicrosoftSQLJPA;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.MicrosoftSQLJPA.Dao.EmpRepo;
+import com.MicrosoftSQLJPA.Entity.Employee;
+
+
+@SpringBootApplication
+public class JpaMssqlApplication {
+
+	public static void main(String[] args) {
+		ApplicationContext c1=SpringApplication.run(JpaMssqlApplication.class, args);
+		 EmpRepo r= c1.getBean(EmpRepo.class);
+		 
+		 Employee u=new Employee();
+		 u.setName("Pragati");
+		 u.setCity("Varanasi");
+		 
+		 Employee u1=r.save(u);
+		 System.out.println(u1);
+		}
+
+	}

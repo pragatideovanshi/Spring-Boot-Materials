@@ -1,0 +1,6 @@
+package SpringJDBCDao.copy;
+
+public interface StudentDao {
+	public int insert();
+
+}

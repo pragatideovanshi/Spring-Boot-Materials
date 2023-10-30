@@ -1,0 +1,5 @@
+package com.DevToolsBoot.Entity;
+
+public class Book {
+
+}

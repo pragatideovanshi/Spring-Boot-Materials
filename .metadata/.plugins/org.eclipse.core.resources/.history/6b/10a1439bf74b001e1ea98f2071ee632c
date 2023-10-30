@@ -1,0 +1,12 @@
+package Reference;
+
+public class A {
+	private B ob;
+
+	@Override
+	public String toString() {
+		return "A [ob=" + ob + "]";
+	}
+	
+
+}

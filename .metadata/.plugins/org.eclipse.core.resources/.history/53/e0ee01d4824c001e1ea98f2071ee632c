@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+           
+ 
+ 
+<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" name="data">
+<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+<property name="url" value="jdbc:sqlserver://MSI\\SQLCHECK:1433;databaseName=StudentDb"/>
+<property name="username" value="sa"/>
+<property name="password" value="sqlpswd11"/>
+</bean> 
+         
+<bean class="org.springframework.jdbc.core.JdbcTemplate" name="jdbctemp">
+<property name="dataSource">
+<ref bean="data"/>
+</property> 
+</bean>
+
+<bean class="org.springframework.jdbc.core.JdbcTemplate.StudentDaoImpl" name="studnetdaoimpl">
+<property name="jdbctemplate">
+<ref bean="jdbctemp"/>
+</property> 
+</bean>
+</beans>

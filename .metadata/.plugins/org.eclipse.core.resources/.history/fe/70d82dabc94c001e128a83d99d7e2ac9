@@ -1,0 +1,13 @@
+package com.MicrosoftSQLJPA;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class JpaMssqlApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(JpaMssqlApplication.class, args);
+	}
+
+}

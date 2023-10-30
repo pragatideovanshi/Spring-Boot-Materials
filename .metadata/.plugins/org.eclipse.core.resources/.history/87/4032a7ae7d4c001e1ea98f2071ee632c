@@ -1,0 +1,8 @@
+package SpringJDBCDao;
+
+public class StudnetDaoimpl  implements StudentDao {
+	public int insert() {
+		
+	}
+	
+}
